@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/***************************************
+ESTILOS PARA LA PAGINAS LOGIN Y REGISTRO
+****************************************/
+
+.InicioSesion,
+.Registro, 
+.Password {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.form-cuenta,
+.existencia-cuenta {
+  border-bottom: 3px solid #D9D9D9;
+  margin: 0 auto;
+
+  max-width: 400px;
+  width: 95%;
+}
+
+.form-cuenta .grupo-inputs {
+  background: #FFFFFF;
+  border: 2px solid #D9D9D9;
+  margin-bottom: 2em;
+  padding: 1em 0;
+}
+
+.form-cuenta .grupo-inputs h3 {
+  color: #543A12;
+  font-size: 1.3em;
+  margin: 0 auto .5em auto;
+  text-align: left;
+  width: 80%;
+}
+
+.form-cuenta .grupo-inputs input {
+  border: none;
+  border-bottom: 2px solid #A67224;
+  color: #A67224;
+  font-size: 1em;
+  font-weight: bold;
+  margin: .75em 0;
+  outline: none;
+  padding: .75em;
+  width: 80%;
+}
+
+.form-cuenta .grupo-inputs input:focus {
+  border-color: #212121;
+}
+
+.form-cuenta > input {
+  margin-bottom: 2em;
+}
+
+.form-cuenta label {
+  font-weight: bold;
+}
+
+.form-cuenta .botonIniciarSesion,
+.form-cuenta .botonRegistrarse,
+.existencia-cuenta .botonIrRegistro,
+.existencia-cuenta .botonIrInicioSesion {
+  background: #2C9331;
+  border: 3px solid #2C9331;
+  border-radius: 5px;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 2em;
+  padding: .75em 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.form-cuenta .botonIniciarSesion:hover {
+  background: #237627;
+}
+
+.form-cuenta .botonGoogle {
+  background: #F2F2F2;
+  border: 3px solid #4285F4;
+  color: #4285F4;
+}
+
+.form-cuenta .botonGoogle:hover {
+  background: #FFFFFF;
+}
+
+.form-cuenta .botonGoogle i {
+  font-size: 1.3em;
+}
+
+.existencia-cuenta {
+  color: #606060;
+  border: none;
+  font-weight: bold;
+}
+
+.existencia-cuenta .botonIrRegistro,
+.existencia-cuenta .botonIrInicioSesion {
+  border: 3px solid #2C9331;
+  background: #F2F2F2;
+  color: #2C9331;
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+
+.existencia-cuenta .botonIrRegistro:hover,
+.existencia-cuenta .botonIrInicioSesion:hover {
+  background: #FFFFFF;
+}
+
+/***************************************
+ESTILOS PARA LA PAGINA ProfilePage
+****************************************/
+
+.profile {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.img {
+  
+                  height: "100px";
+                  width: "100px";
+}
+
+.color-tot{
+  color: green;
+  font-weight: bold;
+ }

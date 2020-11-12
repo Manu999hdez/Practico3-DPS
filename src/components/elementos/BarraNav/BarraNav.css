@@ -1,0 +1,100 @@
+/* 
+Estilos para contenedor de la barra de navegacion
+y el logo
+*/
+.navbar-contenedor {
+    background: #A67224;
+    color: #FFF9E5;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-contenedor figure {
+    margin: 0;
+}
+
+.navbar-contenedor figure img {
+    cursor: pointer;
+    margin: 1em;
+    width: 200px;
+}
+/* Estilos para la barra de navegacion */
+
+.navbar {
+    font-weight: bold;
+    position: relative;
+    width: 46%;
+    border-color:#A67224;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar > i {
+    cursor: pointer;
+    font-size: 2em;
+}
+
+.navbar ul,
+.navbar-usuario ul {
+    background: #fdf9f4;
+    height: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transition: .2s all ease-out;
+    z-index: 10;
+
+    position: absolute;
+    top: 100%;
+    right: 0;
+}
+
+.navbar ul li a,
+.navbar-usuario ul li a {
+    color: #A67224;
+    display: block;
+    padding: 1em 2em;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover,
+.navbar-usuario ul li a:hover {
+    background: #7D561C;
+}
+
+/* Estilos al estar activo el menu de la barra de navegacion*/
+
+ul.menu-activo {
+    height: 20vh;
+}
+
+/* Estilos para la barra de usuario */
+
+.navbar-usuario {
+    font-weight: bold;
+    position: relative;
+    width: 25%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-usuario figure {
+    cursor: pointer;
+    font-size: 2em;
+    margin-right: .5em;
+}
+
+.navbar-usuario ul {
+    max-width: 100%;
+}
+
+/* Estilos al estar activo el menu de la barra de usuario*/
+
+ul.menu-usuario-activo {
+    height: 90px;
+}
