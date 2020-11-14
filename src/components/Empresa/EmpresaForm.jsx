@@ -6,9 +6,11 @@ import Swal from "sweetalert2";
 
 const gana=[];
 const nom=[];
+  let emp=0;
   let c=0;
   let ma=0;
   let me=0;
+  let resta=0;
   let posMa=0;
   let posMe=0;
   let empMe=null;
@@ -22,7 +24,7 @@ const EmpresasForm = (props) => {
   const initialStateValues = {
     sucursal: "",
     ganancias: "",
-    empleados: "",
+    empleados: 0,
   };
 
   const [values, setValues] = useState(initialStateValues);
@@ -38,6 +40,26 @@ const EmpresasForm = (props) => {
     gana.push(values.ganancias);
     nom.push(values.sucursal);
     c++;
+    emp=-(-values.empleados-resta);
+      
+      if(emp>20){
+        resta=emp-20;
+        values.empleados=emp-resta;
+        empMa = values.sucursal; 
+        toast("Se han restado "+resta+" empleados de la sucursal "+values.sucursal+", porque llego a su limite.", {
+        type: "info",
+        });
+      }
+
+      if(emp<20)
+      {
+        values.empleados=emp;
+        empMa = values.sucursal; 
+        toast("Se han agregado "+(values.empleados-resta)+" nuevos empleados y "+resta+" empleados de la sucursal anterios.", {
+        type: "info",
+        });
+      }
+      
     if(c==3) {
      /* me=gana[0];
       ma=gana[0];*/
