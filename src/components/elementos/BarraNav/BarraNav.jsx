@@ -33,13 +33,10 @@ class BarraNav extends React.Component {
 
                 <ul id="navMenu">
                     <li>
-                        <Link to="/"><i className="las la-home"></i> Inicio</Link>
+                        <Link to="/empresa"><i className="las la-credit-card"></i> Ingresar Datos</Link>
                     </li>
                     <li>
-                        <Link to="/empresa"><i className="las la-credit-card"></i> Como comprar</Link>
-                    </li>
-                    <li>
-                        <Link to="/perfil"><i className="las la-users"></i> Quienes Somos</Link>
+                        <Link to="/perfil"><i className="las la-users"></i> Perfil</Link>
                     </li>
                 </ul>
             </nav>
