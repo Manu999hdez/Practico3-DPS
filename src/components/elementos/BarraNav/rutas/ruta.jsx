@@ -11,9 +11,9 @@ import {
 import BarraNav from '../BarraNav';
 
 import ProfilePage from "../../../Login/ProfilePage";
-import Empresa from "../../../Empresa/Sucursales"
+import Empresa from "../../../Empresa/Sucursales";
 
-// class App extends React.Component {
+
 const App = () => {
 
   return (

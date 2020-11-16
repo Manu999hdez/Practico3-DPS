@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 
 const gana=[];
 const nom=[];
+const empl=[];
   let emp=0;
   let c=0;
   let ma=0;
@@ -16,9 +17,10 @@ const nom=[];
   let empMe=null;
   let empMa=null;
   
-
+ 
 const EmpresasForm = (props) => {
-  
+
+
  // Con esta funcion borramos todos los elementos del formulario
  
   const initialStateValues = {
@@ -39,6 +41,7 @@ const EmpresasForm = (props) => {
     if(values.sucursal != "" && values.ganancias != "" && values.empleados !=""){
     gana.push(values.ganancias);
     nom.push(values.sucursal);
+    empl.push(values.empleados);
     c++;
     emp=-(-values.empleados-resta);
       
@@ -60,52 +63,55 @@ const EmpresasForm = (props) => {
         });
       }
       
+      
     if(c==3) {
-     /* me=gana[0];
-      ma=gana[0];*/
-      posMa=1;
-      posMe=1;
-     /* empMa=nom[0];
-      empMe=nom[0];*/
+      posMa=0;
+      posMe=0;
+      let contador =0;
+      let may = [];
+      let men = [];
+      let suma = 0;
       for(let i = 0; i < gana.length; i++){
-        
-         /* ma = gana[i];
-          empMa = nom[i];
-          console.log("Mayores: "+ma+" nombre: "+empMa)
-          console.log("Menores: "+me+" nombre: "+empMe)*/
+       
+        suma += parseInt(gana[i]);
+       
+
         if (gana[i] >= 1000 && gana[i] <= 25000){
           ma = gana[i];
+          may.push(ma)
           empMa = nom[i];
-          toast("El salario mayor es: $"+ma+" del empleado "+empMa+" #"+posMa+ "Buen trabajo", {
-            type: "info",
-          });
-          console.log("Mayores: "+ma+" nombre: "+empMa)
-        }else{
+          posMa = empl[i];
+          contador=may.length;
+
+          console.log("**********************************************************************");
+          console.log("Sucursales que obtienen ganancias entre $1,000 y $25,000 son: "+contador);
+          console.log(empMa+" Buen trabajo");
+          console.log("Ganancias: "+ma);
+          console.log("Empleados: "+posMa);
+          console.log("**********************************************************************");
+          
+        }
+        if (gana[i] > 25000) {
             me = gana[i];
+            men.push(me);
             empMe = nom[i]; 
-            toast("El salario menor es: $"+me+" del empleado "+empMe+ " #"+ posMe + "Excelente trabajo", {
-              type: "warning",
-            });
-            console.log("Menores: "+me+" nombre: "+empMe)
+            posMe = empl[i];
+            contador=men.length;
+            console.log("**********************************************************************");
+            console.log("Sucursales que obtienen ganancias mayores a $25,000 son: "+contador);
+            console.log(empMe+" Excelente trabajo");
+            console.log("Ganancias: "+me);
+            console.log("Empleados: "+posMe);
+            console.log("**********************************************************************");
         }
       }
-     /* Swal.fire(
-        "El salario mayor es: $"+ma+" del empleado "+empMa+" #"+posMa,
-        "El salario menor es: $"+me+" del empleado "+empMe+ " #"+posMe,
-        
-    );*/
-     /* toast("El salario mayor es: $"+ma+" del empleado "+empMa+" #"+posMa, {
+      console.log("**********************************************************************");
+      console.log("Ganancia Total de la Empresa: $"+suma)
+      console.log("**********************************************************************");
+      toast("Revisa la Consola", {
         type: "info",
       });
-      toast("El salario menor es: $"+me+" del empleado "+empMe+ " #"+posMe, {
-        type: "warning",
-      });*/
-        
-        posMa=0;
-        posMe=0;
-        empMe=null;
-        empMa=null;
-        c=0;
+
     }
       props.addOrEditEmpresa(values);
       setValues({ ...initialStateValues });
@@ -184,8 +190,8 @@ const EmpresasForm = (props) => {
       <button className="btn btn-primary btn-block">
         {props.currentId === "" ? "Guardar" : "Actualizar"} 
       </button>
-      
     </form>
+    
   );
 };
 

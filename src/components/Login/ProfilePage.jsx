@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { UserContext } from "../Providers/UserProvider";
 import { auth } from "../database/firebase";
-import { Router, Link } from "@reach/router";
 
 const ProfilePage = () => {
 
@@ -17,7 +16,9 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className = "profile">
+    
+    
+       <div className = "profile">
             <div className="container">
         <div className="row">
           <div className="col-md-12">
